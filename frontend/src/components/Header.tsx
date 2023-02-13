@@ -10,7 +10,9 @@ const Header = () => {
       </button>
       <ul>
         <li>Sobre mi</li>
-        
+        <li>Consultorias</li>
+        <li>Proyectos</li>
+        <li>Cenas</li>
       </ul>
     </nav>
   )
