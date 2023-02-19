@@ -2,10 +2,14 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
     display: flex
-    border: red
     flex-direction: column
     justify-content: center
     margin-top: 4rem
+`
+
+export const Panel = styled.div`
+  border: 2px red;
+  height: 1200px;
 `
 
 export const HomeText = styled.div`
@@ -19,8 +23,8 @@ h3 {
     }
   }
   h1 {
-    font-size: 2.2rem;
-    font-weight: 800;
+    font-size: 2rem;
+    font-weight: 500;
     color: var(--first-color);
     background: linear-gradient(to left, #1f1670, #9307f1, #7109e7, #00d9ff);
     background-clip: text;

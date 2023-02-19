@@ -34,7 +34,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
 
     const sideBar = (
         <Box onClick={handleResponsive} sx={{ textAlign: 'center' }}>
-            <Typography variant='h6' sx={{ my: 2 }}>
+            <Typography variant='h6' sx={{ my: 2}} >
                 RubroHoreca
             </Typography>
             <List>
