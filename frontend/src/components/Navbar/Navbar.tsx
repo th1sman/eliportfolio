@@ -3,6 +3,7 @@ import {
     IconButton,
     Toolbar,
     Typography,
+    Button,
     Box,
     Drawer,
     List,
@@ -34,38 +35,42 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
 
     const sideBar = (
         <Box onClick={handleResponsive} sx={{ textAlign: 'center' }}>
-            <Typography variant='h6' sx={{ my: 2}} >
-                RubroHoreca
+            <Typography variant='h6' sx={{ my: 2 }}>
+                <Button>
+                <Link href={'/'}>
+                    RubroHoreca
+                </Link>
+                </Button>
             </Typography>
             <List>
-                <ListItem disablePadding sx={{ display: 'block'}}>
+                <ListItem disablePadding sx={{ display: 'block' }}>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
                             <Link href={'#about'}>
-                            Sobre mi                            
+                                Sobre mi
                             </Link>
-                        </ListItemText>                     
+                        </ListItemText>
                     </ListItemButton>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
                             <Link href={'#advice'}>
-                            Asesorias                            
+                                Asesorias
                             </Link>
-                        </ListItemText>                     
+                        </ListItemText>
                     </ListItemButton>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
                             <Link href={'#dinners'}>
-                            Cenas                            
+                                Cenas
                             </Link>
-                        </ListItemText>                     
+                        </ListItemText>
                     </ListItemButton>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
                             <Link href={'#contact'}>
-                            Contacto                            
+                                Contacto
                             </Link>
-                        </ListItemText>                     
+                        </ListItemText>
                     </ListItemButton>
                 </ListItem>
             </List>
@@ -87,14 +92,17 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                     >
                         <MenuIcon />
                     </IconButton>
+                   
                     <Typography
                         variant='h6'
                         component='div'
                         sx={{ flexGrow: 1, color: '#DCDBC7', display: { xs: 'none', sm: 'block' } }}
                     >
+                         <Link href={'/'}>
                         RubroHoreca
+                        </Link>
                     </Typography>
-                    <Box sx={{ display:  { xs: 'none', sm: 'block'}}}>
+                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <IconButton>
                             <Link href={'#about'}>
                                 <Typography sx={{ color: '#DCDBC7' }}>Sobre mi</Typography>
