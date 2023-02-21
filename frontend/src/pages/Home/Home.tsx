@@ -12,17 +12,21 @@ export interface HomeInterface { }
 
 const Home: React.FC<HomeInterface> = () => {
   return (
-    <Grid container spacing={1} sx={{ paddingTop: '5%', paddingBottom: '5%'}}>
+    <Grid container className={styles['section-container']}>
       {images.map((image) => (
         <Grid 
           item xs={12} sm={6} md={4} key={image.title} >
-          <Paper elevation={0} className={styles['image-container']}>
+          <Paper elevation={0}className={styles['image-container']}>
             <Image
+              className={styles['blur']}
               src={image.url} 
               alt={image.title} 
               fill
-              style={{ objectFit: 'contain'}}
               />
+              <div className={styles['content fade']}>
+                {image.title}
+                {image.description}
+              </div>
           </Paper>
         </Grid>
       ))}

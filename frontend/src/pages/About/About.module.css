@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+
+.image-container {
+    position: relative;
+    background-color: transparent;
+    height: 70vh;
+}
+
+.image-container img {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.content{
+    border: 2px solid red;
+}
