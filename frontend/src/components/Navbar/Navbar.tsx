@@ -11,14 +11,15 @@ import {
     ListItemButton,
     ListItemText
 } from '@mui/material'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import MenuIcon from '@mui/icons-material/Menu'
-import Link from 'next/link'
 import { useState } from 'react'
 
 
 interface Props {
     window?: () => Window
 }
+
 
 export interface NavbarInterface {
 
@@ -36,38 +37,63 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
     const sideBar = (
         <Box onClick={handleResponsive} sx={{ textAlign: 'center' }}>
             <Typography variant='h6' sx={{ my: 2 }}>
-                <Button>
-                <Link href={'/'}>
+                <Button onClick={() => scroll.scrollToTop()}>
                     RubroHoreca
-                </Link>
                 </Button>
             </Typography>
             <List>
                 <ListItem disablePadding sx={{ display: 'block' }}>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
-                            <Link href={'#about'}>
+                            <Link
+                                activeClass='active'
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
                                 Sobre mi
                             </Link>
                         </ListItemText>
                     </ListItemButton>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
-                            <Link href={'#advice'}>
+                            <Link
+                                activeClass='active'
+                                to="adviser"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
                                 Asesorias
                             </Link>
                         </ListItemText>
                     </ListItemButton>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
-                            <Link href={'#dinners'}>
+                            <Link
+                                activeClass='active'
+                                to="cenas"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
                                 Cenas
                             </Link>
                         </ListItemText>
                     </ListItemButton>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
-                            <Link href={'#contact'}>
+                            <Link
+                                activeClass='active'
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500} >
                                 Contacto
                             </Link>
                         </ListItemText>
@@ -92,34 +118,68 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                     >
                         <MenuIcon />
                     </IconButton>
-                   
+
                     <Typography
                         variant='h6'
                         component='div'
                         sx={{ flexGrow: 1, color: '#DCDBC7', display: { xs: 'none', sm: 'block' } }}
                     >
-                         <Link href={'/'}>
-                        RubroHoreca
+                        <Link 
+                         activeClass='active'
+                         to="/"
+                         spy={true}
+                         smooth={true}
+                         offset={-70}
+                         duration={500} 
+                         >
+                            RubroHoreca
                         </Link>
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <IconButton>
-                            <Link href={'#about'}>
+                            <Link 
+                             activeClass='active'
+                             to="about"
+                             spy={true}
+                             smooth={true}
+                             offset={-70}
+                             duration={500} 
+                             >
                                 <Typography sx={{ color: '#DCDBC7' }}>Sobre mi</Typography>
                             </Link>
                         </IconButton>
                         <IconButton>
-                            <Link href={'#advice'}>
+                            <Link 
+                             activeClass='active'
+                             to="advice"
+                             spy={true}
+                             smooth={true}
+                             offset={-70}
+                             duration={500} 
+                             >
                                 <Typography sx={{ color: '#DCDBC7' }}>Asesorias</Typography>
                             </Link>
                         </IconButton>
                         <IconButton>
-                            <Link href={'#dinners'}>
+                            <Link  
+                            activeClass='active'
+                                to="dinners"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500} 
+                                >
                                 <Typography sx={{ color: '#DCDBC7' }}>Cenas</Typography>
                             </Link>
                         </IconButton>
                         <IconButton>
-                            <Link href={'#contact'}>
+                            <Link 
+                             activeClass='active'
+                             to="contact"
+                             spy={true}
+                             smooth={true}
+                             offset={-70}
+                             duration={500} >
                                 <Typography sx={{ color: '#DCDBC7' }}>Contacto</Typography>
                             </Link>
                         </IconButton>
@@ -144,8 +204,8 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                     {sideBar}
                 </Drawer>
             </Box>
-        </Box>
+        </Box >
     )
 }
 
-export default Navbar
+export default Navbar   

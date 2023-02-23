@@ -1,1 +1,1 @@
-export { default as Dinners } from './dinners'
+export { default as Dinners } from './Dinners'

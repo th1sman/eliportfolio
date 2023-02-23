@@ -18,7 +18,7 @@ html.normal-scroll {
 }
 
 :root {
- background-color: #82744A
+ background-color: #DCDBC7
 }
 
 body{

@@ -1,21 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-
-.image-container {
+.imageContainer {
     position: relative;
     background-color: transparent;
     height: 70vh;
 }
 
-.image-container img {
+.imageContainer img {
+    position: relative;
     opacity: 1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: fill;
+    transition: transform 0.4s ease-in-out;
 }
 
-.content{
-    border: 2px solid red;
+.imageContainer img:hover{
+    transform: scale(1.1) translate(20px, 20px);
+}
+.content {
+    margin-top: 20px;
+    font-family: 'Dancing Script';
+    border-radius: 0.55em;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #405061;
+    background-color: #DCDBC7;
+    text-align: center;
+
 }

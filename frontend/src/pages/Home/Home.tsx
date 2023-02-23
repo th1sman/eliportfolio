@@ -8,15 +8,15 @@ const images = [
   { url: '/14.jpeg', title: 'Imagen 3', description: 'Descripción de la imagen 3' },
 ];
 
-export interface HomeInterface { }
+export interface HomeInterface {}
 
 const Home: React.FC<HomeInterface> = () => {
   return (
-    <Grid container className={styles['section-container']}>
+    <Grid container className={styles.sectionContainer}>
       {images.map((image) => (
         <Grid 
           item xs={12} sm={6} md={4} key={image.title} >
-          <Paper elevation={0}className={styles['image-container']}>
+          <Paper elevation={0} className={styles.imageContainer}>
             <Image
               className={styles['blur']}
               src={image.url} 

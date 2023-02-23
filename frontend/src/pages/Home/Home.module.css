@@ -1,15 +1,15 @@
 
-.section-container {
+.sectionContainer {
     padding-bottom: 8%;
 }
 
-.image-container {
+.imageContainer {
     height: 80vh;
     position: relative;
     background: transparent;
 }
 
-.image-container > .content{
+.imageContainer > .content{
     position: absolute;
     inset: 0;
     font-size: 2rem;
@@ -20,28 +20,28 @@
     align-items: center;
 }
 
-.image-container > img,
-.image-container > .content {
+.imageContainer > img,
+.imageContainer > .content {
     transition: 200ms ease-in-out;
 }
 
-.image-container:hover > img.blur {
+.imageContainer:hover > img.blur {
     filter: blur(2px);
 }
 
-.image-container > .content.fade {
+.imageContainer > .content.fade {
     opacity: 0;
 }
-.image-container:hover > .content.fade {
+.imageContainer:hover > .content.fade {
     opacity: 1;
 }
 
 
-.image-container:hover img{
+.imageContainer:hover img{
  transform: scale(1.02);  
 }
 
-.image-container > img {
+.imageContainer > img {
     display: block;
     aspect-ratio: 1 / 1;
     padding-top: 15%;
