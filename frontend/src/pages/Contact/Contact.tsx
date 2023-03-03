@@ -11,7 +11,6 @@ interface ContactFormData {
 }
 
 interface ContactInterface {
-  title: string
 }
 
 const validationSchema = Yup.object({

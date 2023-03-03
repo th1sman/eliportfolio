@@ -29,9 +29,7 @@ const images = [
 ];
 
 interface DinnerInterface {
-  name: string
-  description: string;
-  images: string[]
+
 }
 
 const Dinners: React.FC<DinnerInterface> = () => {
