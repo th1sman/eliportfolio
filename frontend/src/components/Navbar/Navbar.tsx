@@ -11,6 +11,7 @@ import {
     ListItemButton,
     ListItemText
 } from '@mui/material'
+import Image from 'next/image'
 import { Link, animateScroll as scroll } from 'react-scroll'
 import MenuIcon from '@mui/icons-material/Menu'
 import { useState } from 'react'
@@ -36,7 +37,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
 
     const sideBar = (
         <Box onClick={handleResponsive} sx={{ textAlign: 'center' }}>
-            <Typography variant='h6' sx={{ my: 2 }}>
+            <Typography variant='h6' sx={{ my: 2, color: '#d7d7c3' }}>
                 <Button onClick={() => scroll.scrollToTop()}>
                     RubroHoreca
                 </Button>
@@ -51,7 +52,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
-                                duration={500}
+                                duration={100}
                             >
                                 Sobre mi
                             </Link>
@@ -61,11 +62,11 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                         <ListItemText>
                             <Link
                                 activeClass='active'
-                                to="adviser"
+                                to="consulting"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
-                                duration={500}
+                                duration={100}
                             >
                                 Asesorias
                             </Link>
@@ -75,11 +76,11 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                         <ListItemText>
                             <Link
                                 activeClass='active'
-                                to="cenas"
+                                to="dinners"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
-                                duration={500}
+                                duration={100}
                             >
                                 Cenas
                             </Link>
@@ -93,7 +94,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
-                                duration={500} >
+                                duration={100} >
                                 Contacto
                             </Link>
                         </ListItemText>
@@ -124,62 +125,71 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                         component='div'
                         sx={{ flexGrow: 1, color: '#DCDBC7', display: { xs: 'none', sm: 'block' } }}
                     >
-                        <Link 
-                         activeClass='active'
-                         to="/"
-                         spy={true}
-                         smooth={true}
-                         offset={-70}
-                         duration={500} 
-                         >
-                            RubroHoreca
+                        <Link
+                            activeClass='active'
+                            to="/"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            <Button sx={{ fontFamily: 'Dancing Script', fontSize: '1.2em', color: '#d7d7c3' }} onClick={() => scroll.scrollToTop()}>
+                                RubroHoreca
+                            </Button>
+                            <Image
+                                src={'/logo.png'}
+                                alt='logo'
+                                width={45}
+                                height={45}
+                                
+                                />
                         </Link>
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <IconButton>
-                            <Link 
-                             activeClass='active'
-                             to="about"
-                             spy={true}
-                             smooth={true}
-                             offset={-70}
-                             duration={500} 
-                             >
+                            <Link
+                                activeClass='active'
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
                                 <Typography sx={{ color: '#DCDBC7' }}>Sobre mi</Typography>
                             </Link>
                         </IconButton>
                         <IconButton>
-                            <Link 
-                             activeClass='active'
-                             to="advice"
-                             spy={true}
-                             smooth={true}
-                             offset={-70}
-                             duration={500} 
-                             >
+                            <Link
+                                activeClass='active'
+                                to="consulting"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
                                 <Typography sx={{ color: '#DCDBC7' }}>Asesorias</Typography>
                             </Link>
                         </IconButton>
                         <IconButton>
-                            <Link  
-                            activeClass='active'
+                            <Link
+                                activeClass='active'
                                 to="dinners"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
-                                duration={500} 
-                                >
+                                duration={500}
+                            >
                                 <Typography sx={{ color: '#DCDBC7' }}>Cenas</Typography>
                             </Link>
                         </IconButton>
                         <IconButton>
-                            <Link 
-                             activeClass='active'
-                             to="contact"
-                             spy={true}
-                             smooth={true}
-                             offset={-70}
-                             duration={500} >
+                            <Link
+                                activeClass='active'
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500} >
                                 <Typography sx={{ color: '#DCDBC7' }}>Contacto</Typography>
                             </Link>
                         </IconButton>
@@ -189,6 +199,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
             </AppBar>
             <Box component='nav'>
                 <Drawer
+                    
                     container={container}
                     variant='temporary'
                     open={mobile}
@@ -197,7 +208,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                         keepMounted: true,
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
+                        display: { xs: 'block', sm: 'none', maxWidth: '200' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '240px' }
                     }}
                 >

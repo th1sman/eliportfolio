@@ -1,4 +1,5 @@
-import { Home } from "./pages";
+import { Home } from "./pages/Home";
+import { About } from './pages/About'
 import { Navbar } from "./components/Navbar";
 import { LayoutContainer } from "./styled-components";
 
@@ -8,6 +9,7 @@ function App() {
             <Navbar />
             <LayoutContainer>
                 <Home />
+                <About />
             </LayoutContainer>
         </>
     )

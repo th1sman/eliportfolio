@@ -1,6 +1,7 @@
 
 .sectionContainer {
-    padding-bottom: 8%;
+    max-width: 100%;
+    margin-bottom: 10%;
 }
 
 .imageContainer {
@@ -10,8 +11,6 @@
 }
 
 .imageContainer > .content{
-    position: absolute;
-    inset: 0;
     font-size: 2rem;
     padding: 1rem;
     background: rgba(255, 255, 255, .4);

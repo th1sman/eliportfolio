@@ -3,30 +3,27 @@ import styles from './Home.module.css'
 import Image from 'next/image'
 
 const images = [
-  { url: '/16.jpeg', title: 'Imagen 1', description: 'Descripción de la imagen 2' },
-  { url: '/3.jpeg', title: 'Imagen 2', description: 'Descripción de la imagen 2' },
-  { url: '/14.jpeg', title: 'Imagen 3', description: 'Descripción de la imagen 3' },
+  { url: '/16.jpeg', title: 'Imagen 1' },
+  { url: '/3.jpeg', title: 'Imagen 2' },
+  { url: '/14.jpeg', title: 'Imagen 3'},
 ];
 
 export interface HomeInterface {}
 
 const Home: React.FC<HomeInterface> = () => {
   return (
-    <Grid container className={styles.sectionContainer}>
+    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 1 }} className={styles.sectionContainer}>
       {images.map((image) => (
         <Grid 
           item xs={12} sm={6} md={4} key={image.title} >
           <Paper elevation={0} className={styles.imageContainer}>
             <Image
+              loading='lazy'
               className={styles['blur']}
               src={image.url} 
               alt={image.title} 
               fill
               />
-              <div className={styles['content fade']}>
-                {image.title}
-                {image.description}
-              </div>
           </Paper>
         </Grid>
       ))}
