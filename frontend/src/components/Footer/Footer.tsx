@@ -1,7 +1,9 @@
 import React from 'react'
 import { Box, Typography, Grid, Hidden } from "@mui/material"
 
-const Footer = () => {
+export interface FooterInterface {}
+
+const Footer: React.FC<FooterInterface> = () => {
   return (
     <Box
       sx={{

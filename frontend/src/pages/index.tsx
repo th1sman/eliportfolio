@@ -1,12 +1,11 @@
 import Head from "next/head";
-import { Home } from "./Home";
-import { About } from './About'
-import { Contact } from './Contact'
-import { Dinners } from "./Dinners";
-import { Consulting } from "./Consulting";
+import { Home } from "../components/Home";
+import { About } from '../components/About'
+import { Contact } from '../components/Contact'
+import { Dinners } from "../components/Dinners";
+import { Consulting } from "../components/Consulting";
 import { Footer } from '@/components/Footer'
 import { Navbar } from "@/components/Navbar";
-import { Section } from '../styles/styles'
 
 
 
@@ -17,13 +16,11 @@ export default function Main() {
                 <title> RubroHoreca | Eliezer Jara</title>
             </Head>
             <Navbar />
-            <Section>
                 <Home />
                 <About />
                 <Consulting />
                 <Dinners />
                 <Contact />
-            </Section>
             <Footer />
         </>
     )
