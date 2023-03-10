@@ -45,7 +45,7 @@ const Contact: React.FC<ContactInterface> = () => {
           {({ isSubmitting }) => (
             <Form>
               <Grid>
-                <Card style={{ maxWidth: 450, padding: "10px 5px", margin: "0 auto" }}>
+                <Card style={{ maxWidth: 450, margin: "0 auto" }}>
                   <CardContent>
                     <CardMedia
                       component='img'
