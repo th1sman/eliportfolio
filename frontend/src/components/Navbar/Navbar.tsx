@@ -89,12 +89,13 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
                             <Link
+                                to='contact'
                                 activeClass='active'
-                                to="contact"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
-                                duration={100} >
+                                duration={100}
+                                onClick={() => scroll.scrollToBottom()}>
                                 Contacto
                             </Link>
                         </ListItemText>
@@ -141,8 +142,8 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 alt='logo'
                                 width={45}
                                 height={45}
-                                
-                                />
+
+                            />
                         </Link>
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -189,7 +190,8 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
-                                duration={500} >
+                                duration={500}
+                                onClick={() => scroll.scrollToBottom()}>
                                 <Typography sx={{ color: '#DCDBC7' }}>Contacto</Typography>
                             </Link>
                         </IconButton>
@@ -199,7 +201,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
             </AppBar>
             <Box component='nav'>
                 <Drawer
-                    
+
                     container={container}
                     variant='temporary'
                     open={mobile}

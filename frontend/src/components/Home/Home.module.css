@@ -1,16 +1,20 @@
-
 .sectionContainer {
-    max-width: 100%;
-    margin-bottom: 10%;
+    width: 100%;
+    padding-top: 7%;
+    height: 650px;
 }
 
 .imageContainer {
-    height: 80vh;
     position: relative;
+    height: 80vh;
     background: transparent;
 }
 
-.imageContainer > .content{
+.center {
+    text-align: center;
+}
+
+.imageContainer>.content {
     font-size: 2rem;
     padding: 1rem;
     background: rgba(255, 255, 255, .4);
@@ -19,28 +23,41 @@
     align-items: center;
 }
 
-.imageContainer > img,
-.imageContainer > .content {
+.imageText {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 45px 0 30px 0;
+}
+
+.imageContainer>img,
+.imageContainer>.content {
     transition: 200ms ease-in-out;
 }
 
-.imageContainer:hover > img.blur {
+.imageContainer:hover .MuiTypography-root {
+    opacity: 1;
+}
+
+.imageContainer:hover>img.blur {
     filter: blur(2px);
 }
 
-.imageContainer > .content.fade {
+.imageContainer>.content.fade {
     opacity: 0;
 }
-.imageContainer:hover > .content.fade {
+
+.imageContainer:hover>.content.fade {
     opacity: 1;
 }
 
 
-.imageContainer:hover img{
- transform: scale(1.02);  
+.imageContainer:hover img {
+    transform: scale(1.02);
 }
 
-.imageContainer > img {
+.imageContainer>img {
+    height: 100%;
     display: block;
     aspect-ratio: 1 / 1;
     padding-top: 15%;

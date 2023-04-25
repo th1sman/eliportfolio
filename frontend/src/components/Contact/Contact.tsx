@@ -38,46 +38,44 @@ const Contact: React.FC<ContactInterface> = () => {
   }
   return (
     <div className={styles.form} id={'contact'}>
-        <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={handleSubmit} >
-          {({ isSubmitting }) => (
-            <Form>
-              <Grid>
-                <Card style={{ maxWidth: 450, margin: "0 auto" }}>
-                  <CardContent>
-                    <CardMedia
-                      component='img'
-                      image={"/5.jpeg"}
-                    />
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit} >
+        {({ isSubmitting }) => (
+          <Form>
+            <Grid>
+              <Card style={{ maxWidth: 450, margin: "0 auto" }}>
+                <CardContent>
+                  <CardMedia
+                    component='img'
+                    image={"/5.jpeg"}
+                  />
 
-                    <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
-                      Contactame!
-                    </Typography>
-                    <form>
-                      <Grid container spacing={1} sx={{ paddingTop: '20px', marginBottom: '60px'}}>
-                        <Grid xs={12} item>
-                          <TextField placeholder="Nombre" label="Nombre" variant="outlined" fullWidth required />
-                        </Grid>
-                        <Grid item xs={12}>
-                          <TextField type="email" placeholder="Corre Electronico" label="Email" variant="outlined" fullWidth required />
-                        </Grid>
-                        <Grid item xs={12}>
-                          <TextField label="Cuentame tu idea" multiline rows={4} placeholder="Mensaje" variant="outlined" fullWidth required />
-                        </Grid>
-                        <Grid item xs={12}>
-                          <Button type="submit" variant="contained" color="primary" fullWidth>Enviar</Button>
-                        </Grid>
+                  <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
+                    Contactame!
+                  </Typography>
+                  <Grid container spacing={1} sx={{ paddingTop: '20px', marginBottom: '60px' }}>
+                    <Grid xs={12} item>
+                      <TextField placeholder="Nombre" label="Nombre" variant="outlined" fullWidth required />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField type="email" placeholder="Corre Electronico" label="Email" variant="outlined" fullWidth required />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField label="Cuentame tu idea" multiline rows={4} placeholder="Mensaje" variant="outlined" fullWidth required />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Button type="submit" variant="contained" color="primary" fullWidth>Enviar</Button>
+                    </Grid>
 
-                      </Grid>
-                    </form>
-                  </CardContent>
-                </Card>
-              </Grid>
-            </Form>
-          )}
-        </Formik>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Form>
+        )}
+      </Formik>
     </div>
   )
 }

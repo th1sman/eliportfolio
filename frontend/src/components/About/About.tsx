@@ -9,12 +9,15 @@ const About: React.FC<AboutInterface> = () => {
         <div id={'about'}>
             <Grid container>
                 <Grid item xs={12} sm={6} md={6}>
-                    <Box className={styles.imageContainer} >
+                    <Box
+                        className={styles.imageContainer}
+                        sx={{ display: 'flex', justifyContent: 'center' }} >
                         <Image
-                            src={'/6.jpeg'}
+                            src={'/5.jpeg'}
                             alt={'Imagen About'}
-                            fill
-                            style={{ objectFit: 'contain' }}
+                            width={400}
+                            height={400}
+                            style={{ objectFit: 'cover', borderRadius: '50%' }}
                         />
                     </Box>
                 </Grid>

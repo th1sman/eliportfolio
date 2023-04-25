@@ -11,8 +11,15 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
   textAlign: 'center',
   color: theme.palette.text.secondary,
+  borderRadius: theme.shape.borderRadius,
+  boxShadow: theme.shadows[1],
+  transition: 'box-shadow 0.3s ease-in-out',
+  '&:hover': {
+    boxShadow: theme.shadows[5],
+  }
 }));
 
+// colocar imagenes de las demas galerias
 const images = [
   {
     original: '/15.jpeg',
@@ -28,30 +35,62 @@ const images = [
   },
 ];
 
+const gallery2 = [
+  {
+    original: '/11.jpeg',
+    thumbnail: '/thumbnail15.jpeg',
+  },
+  {
+    original: '/9.jpeg',
+    thumbnail: '/thumbnail13.jpeg',
+  },
+  {
+    original: '/19.jpeg',
+    thumbnail: '/thumbnail9.jpeg',
+  },
+]
+
+const gallery3 = [
+  {
+    original: '/2.jpeg',
+    thumbnail: '/thumbnail15.jpeg',
+  },
+  {
+    original: '/7.jpeg',
+    thumbnail: '/thumbnail13.jpeg',
+  },
+  {
+    original: '/14.jpeg',
+    thumbnail: '/thumbnail9.jpeg',
+  },
+]
+
 interface DinnerInterface {
 
 }
 
 const Dinners: React.FC<DinnerInterface> = () => {
   return (
-    <div id={'dinners'}>
-    <Box className={styles.dinnerContainer} sx={{ flexGrow: 1 }}>
-      <Grid className={styles.dinners} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 6, md: 12 }} >
-          <Grid item xs={2} sm={4} md={4}>
-            <Item>
-              <GalleryModal images={images} />
-            </Item>
-          </Grid>
-          <Grid item xs={2} sm={4} md={4}>
-            <Item>Cena</Item>
-          </Grid>
-          <Grid item xs={2} sm={4} md={4}>
-            <Item>Cena</Item>
-          </Grid>
+    <Box sx={{ p: 2 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={6} md={4}>
+          <Item>
+            <GalleryModal images={images} />
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Item>
+            <GalleryModal images={gallery2} />
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Item>
+            <GalleryModal images={gallery3} />
+          </Item>
+        </Grid>
       </Grid>
     </Box>
-    </div>
   );
-}
+};
 
 export default Dinners

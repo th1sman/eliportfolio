@@ -1,53 +1,52 @@
-import React, { useState } from "react";
-import { Modal, Box, Button, Typography, Paper } from "@mui/material";
+import { useState } from "react";
+import { Box, Typography, Paper } from "@mui/material";
 import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { styled } from "@mui/material/styles"
+import AppModal from "./AppModal";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: 'transparent',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
-
-
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 500,
-  height: '100%',
-  boxShadow: 24,
-  backgroundColor: '#181a1b',
-}
 
 export interface GalleryModalProps {
   images: ReactImageGalleryItem[];
 }
 
+const style = {
+  width: 500,
+  height: '100%',
+};
+
 const GalleryModal: React.FC<GalleryModalProps> = ({ images }) => {
+
   const [open, setOpen] = useState(false)
+
+  const Item = ({ children }: { children: React.ReactNode }) => (
+    <Paper
+      sx={{
+        backgroundColor: "transparent",
+        typography: "body2",
+        padding: 1,
+        textAlign: "center",
+        color: "text.secondary",
+      }}
+      onClick={() => setOpen(true)}
+    >
+      {children}
+    </Paper>
+  );
 
   const handleClose = () => {
     setOpen(false)
   }
 
-  const handleOpen = () => {
-    setOpen(true)
-  }
   return (
     <>
-      <Item onClick={handleOpen}>
+      <Item>
         <Typography>Cena Maridaje</Typography>
       </Item>
-      <Modal open={open} onClose={handleClose}>
+      <AppModal open={open} onClose={handleClose}>
         <Box sx={style}>
           <ImageGallery items={images} />
         </Box>
-      </Modal>
+      </AppModal>
     </>
   )
 }
