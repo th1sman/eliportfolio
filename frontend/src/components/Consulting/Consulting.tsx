@@ -1,7 +1,6 @@
 import { Box, Paper, Grid, Button, Card, CardContent, CardMedia, Typography } from '@mui/material'
 import styles from './Consulting.module.css'
 import { styled } from '@mui/material/styles';
-import { useTheme } from '@material-ui/core/styles';
 
 
 export interface ConsultingInterface { }
@@ -18,11 +17,11 @@ const Item = styled(Card)(({ theme }) => ({
 
 
 const Consulting: React.FC<ConsultingInterface> = () => {
-    const theme = useTheme()
+  
 
     return (
         <Box className={styles.content} id={'consulting'}>
-            <Typography variant='h4' fontFamily='Dancing Script' fontSize={theme.breakpoints.down('sm') ? '2rem' : '4rem'} >
+            <Typography variant='h4' fontFamily='Dancing Script' >
                 Asesoria Gastronomica que va dirigida a hoteles, restaurantes, cafeterias, fast food y todo negocio de AA.BB. ( alimentos y bebidas).
             </Typography>
             <Grid container spacing={1}>
@@ -33,7 +32,7 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                             sx={{ height: '360px' }}
                             image="/11.jpeg"
                         />
-                        <Typography variant='h6' fontFamily='Dancing Script' fontSize={theme.breakpoints.down('sm') ? '1.08em' : '4rem'}>
+                        <Typography variant='h6' fontFamily='Dancing Script' >
                             Gestión de proveedores
                         </Typography>
                     </Item>
@@ -45,7 +44,7 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                             sx={{ height: '360px' }}
                             image="/8.jpeg"
                         />
-                        <Typography variant='h6' fontFamily='Dancing Script' fontSize={theme.breakpoints.down('sm') ? '1.08em' : '4rem'}>
+                        <Typography variant='h6' fontFamily='Dancing Script' >
                             Cambios y Costeo  de carta segun estacionalidad y target.
                         </Typography>
                     </Item>
@@ -57,7 +56,7 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                             sx={{ height: '360px', }}
                             image="/10.jpeg"
                         />
-                        <Typography fontFamily='Dancing Script' fontSize={theme.breakpoints.down('sm') ? '1.08em' : '4rem'}>
+                        <Typography fontFamily='Dancing Script'>
                             Capacitaciones para el personal
                         </Typography>
                     </Item>

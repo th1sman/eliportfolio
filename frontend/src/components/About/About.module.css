@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+.section {
+    display: 'flex',
+    justifyContent: 'center',
+}
+
 .imageContainer {
     background-color: transparent;
     height: 70vh;
