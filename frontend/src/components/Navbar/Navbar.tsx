@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
     }
 
     const sideBar = (
-        <Box onClick={handleResponsive} sx={{ textAlign: 'center' }}>
+        <Box sx={{ textAlign: 'center' }}>
             <Typography variant='h6' sx={{ my: 2, color: '#d7d7c3' }}>
                 <Button onClick={() => scroll.scrollToTop()}>
                     RubroHoreca

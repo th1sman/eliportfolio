@@ -1,68 +1,60 @@
 import { Box, Paper, Grid, Button, Card, CardContent, CardMedia, Typography } from '@mui/material'
-import styles from './Consulting.module.css'
-import { styled } from '@mui/material/styles';
-
 
 export interface ConsultingInterface { }
 
-const Item = styled(Card)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    fontSize: '1.2rem',
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    fontFamily: 'Dancing Script',
-    color: '#1F273C',
-}));
-
-
 const Consulting: React.FC<ConsultingInterface> = () => {
-  
-
     return (
-        <Box className={styles.content} id={'consulting'}>
-            <Typography variant='h4' fontFamily='Dancing Script' >
-                Asesoria Gastronomica que va dirigida a hoteles, restaurantes, cafeterias, fast food y todo negocio de AA.BB. ( alimentos y bebidas).
-            </Typography>
-            <Grid container spacing={1}>
-                <Grid item xs={12} sm={6} md={4}>
-                    <Item>
-                        <CardMedia
-                            component="img"
-                            sx={{ height: '360px' }}
-                            image="/11.jpeg"
-                        />
-                        <Typography variant='h6' fontFamily='Dancing Script' >
-                            Gestión de proveedores
-                        </Typography>
-                    </Item>
+        <Box
+            sx={{
+                marginTop: 5,
+                height: 950,
+             
+            }}
+            id={'consulting'}
+        >
+            <Grid container spacing={2}>
+                <Grid item xs={12} sm={6} md={4} textAlign="center">
+                    <CardMedia
+                        component="img"
+                        sx={{
+                            borderBottom: "1px solid grey",
+                            height: "80%",
+                            
+                        }}
+                        image="/11.jpeg"
+                    />
+                    <Typography variant='h6' fontFamily='Dancing Script' >
+                        Gestión de proveedores
+                    </Typography>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <Item>
-                        <CardMedia
-                            component="img"
-                            sx={{ height: '360px' }}
-                            image="/8.jpeg"
-                        />
-                        <Typography variant='h6' fontFamily='Dancing Script' >
-                            Cambios y Costeo  de carta segun estacionalidad y target.
-                        </Typography>
-                    </Item>
+                <Grid item xs={12} sm={6} md={4} textAlign="center">
+                    <CardMedia
+                        component="img"
+                        sx={{ height: "80%" }}
+                        image="/8.jpeg"
+                    />
+                    <Typography variant='h6' fontFamily='Dancing Script' >
+                        Cambios y Costeo  de carta segun estacionalidad y target.
+                    </Typography>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <Item>
-                        <CardMedia
-                            component="img"
-                            sx={{ height: '360px', }}
-                            image="/10.jpeg"
-                        />
-                        <Typography fontFamily='Dancing Script'>
-                            Capacitaciones para el personal
-                        </Typography>
-                    </Item>
+                <Grid item xs={12} sm={6} md={4} textAlign="center">
+                    <CardMedia
+                        component="img"
+                        sx={{ height: "80%" }}
+                        image="/10.jpeg"
+                    />
+                    <Typography
+                        sx={{
+                            letterSpacing: 1,
+                            lineHeight: 1.5,
+                            fontSize: '1.5em',
+                        }}
+                        fontFamily='Dancing Script'>
+                        Capacitaciones para el personal
+                    </Typography>
                 </Grid>
             </Grid>
-        </Box>
+        </Box >
     )
 }
 
