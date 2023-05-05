@@ -2,7 +2,9 @@ import Box from '@mui/material/Paper'
 import { styled } from '@mui/material/styles'
 
 const FloatingShadowBox = styled(Box)({
-    boxShadow: '0px 4px 10px rgba(0, 0, 0, 3)',
+    width: 500,
+    height: 500,
+    boxShadow: '0px 4px 2px rgba(0, 0, 0, 3)',
     overflow: 'hidden',
     '&:hover': {
         boxShadow: '0px 10px 30px rgba(0, 0, 0, 20)',

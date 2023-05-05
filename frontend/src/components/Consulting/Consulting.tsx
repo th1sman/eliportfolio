@@ -7,8 +7,7 @@ const Consulting: React.FC<ConsultingInterface> = () => {
         <Box
             sx={{
                 marginTop: 5,
-                height: 950,
-             
+                height: 700,
             }}
             id={'consulting'}
         >
@@ -17,13 +16,16 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                     <CardMedia
                         component="img"
                         sx={{
-                            borderBottom: "1px solid grey",
                             height: "80%",
-                            
+
                         }}
                         image="/11.jpeg"
                     />
-                    <Typography variant='h6' fontFamily='Dancing Script' >
+                    <Typography variant='subtitle1' sx={{
+                        fontStyle: 'italic',
+                        fontFamily: 'Poppins',
+                        fontSize: '1.1em'
+                    }}>
                         Gestión de proveedores
                     </Typography>
                 </Grid>
@@ -33,7 +35,11 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                         sx={{ height: "80%" }}
                         image="/8.jpeg"
                     />
-                    <Typography variant='h6' fontFamily='Dancing Script' >
+                    <Typography variant='subtitle1' sx={{
+                        fontStyle: 'italic',
+                        fontFamily: 'Poppins',
+                        fontSize: '1.1em'
+                    }}>
                         Cambios y Costeo  de carta segun estacionalidad y target.
                     </Typography>
                 </Grid>
@@ -44,12 +50,11 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                         image="/10.jpeg"
                     />
                     <Typography
-                        sx={{
-                            letterSpacing: 1,
-                            lineHeight: 1.5,
-                            fontSize: '1.5em',
-                        }}
-                        fontFamily='Dancing Script'>
+                        variant='subtitle1' sx={{
+                            fontStyle: 'italic',
+                            fontFamily: 'Poppins',
+                            fontSize: '1.1em'
+                        }}>
                         Capacitaciones para el personal
                     </Typography>
                 </Grid>
