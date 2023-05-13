@@ -9,6 +9,7 @@ const Footer: React.FC<FooterInterface> = () => {
       sx={{
         maxWidth: '100%',
         bgcolor: "#1f273c",
+        paddingTop: 7,
         color: '#dcdbc7'
       }}
     >

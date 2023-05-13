@@ -3,22 +3,25 @@ import FloatingShadowBox from '../FloatingShadowBox'
 import Image from 'next/image'
 
 
-export interface AboutInterface { }
-
-const About: React.FC<AboutInterface> = () => {
+const About: React.FC = () => {
 
     return (
-        <Box component="div"
+        <Box sx={{
+            paddingTop: '100px',
+            width: {
+                xs: '100px',
+                sm: '200px',
+                md: '600px',
+                lg: '100%'
+            },
+        }}
             id={'about'}>
-            <Grid container spacing={6} >
-                <Grid item xs={12} sm={6} md={6} textAlign="center" alignItems="center">
-                    <Box sx={{
-                        paddingTop: 2,
-                        paddingBottom: 4,
-                        color: 'white',
-                        paddingLeft: 3,
-                    }}
-                    >
+            <Grid container>
+                <Grid item xs={12} sm={6} md={6} lg={6} textAlign='center'
+                    sx={{
+                     paddingLeft: 30,
+                    }}>
+                    <Box>
                         <FloatingShadowBox>
                             <Image
                                 src={'/3.jpeg'}
@@ -54,11 +57,13 @@ const About: React.FC<AboutInterface> = () => {
                     </Box>
 
                 </Grid>
-                <Grid item xs={12} sm={6} md={6} textAlign="center" alignContent="center">
+                <Grid item xs={12} sm={6} md={6} textAlign="center" alignContent="center"
+                 sx={{
+                    paddingLeft: 19,
+                 }}>
                     <Box sx={{
                         p: 2,
                         width: 500,
-                        paddingBottom: 2,
                         borderRadius: '0.55em',
                         cursor: 'pointer',
                         color: 'white',
@@ -89,6 +94,7 @@ const About: React.FC<AboutInterface> = () => {
                         </FloatingShadowBox>
                     </Box>
                 </Grid>
+                
             </Grid>
         </Box>
     )

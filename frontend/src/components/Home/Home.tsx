@@ -1,5 +1,4 @@
 import { Grid, Paper, Typography } from '@mui/material'
-import styles from './Home.module.css'
 import Image from 'next/image'
 
 type ImageProps = {
@@ -9,18 +8,21 @@ type ImageProps = {
 const ImageComponent: React.FC<ImageProps> = ({ image }) => {
   return (
     <Grid item xs={12} sm={6} md={4}>
-      <Paper className={styles.imageContainer}>
-        <div className={styles.center}>
+      <Paper>       
           <Image
             loading='lazy'
-            className={styles.blur}
             src={image.url}
             alt={image.title}
-            fill
+            width={610}
+            height={850}
+            style={{        
+              objectFit: 'fill',
+              aspectRatio: '1 / 1'
+            }}
+           
           />
           <Typography variant="h4">{image.title}</Typography>
           <Typography variant="subtitle1">{image.description}</Typography>
-        </div>
       </Paper>
     </Grid>
   )
@@ -39,7 +41,6 @@ const ImageGrid: React.FC<ImageGridProps> = () => {
       container
       rowSpacing={1}
       columnSpacing={{ xs: 1, sm: 2, md: 1 }}
-      className={styles.sectionContainer}
     >
       {images.map((image) => (
         <ImageComponent key={image.title} image={image} />

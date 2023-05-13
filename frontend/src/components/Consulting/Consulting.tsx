@@ -7,7 +7,7 @@ const Consulting: React.FC<ConsultingInterface> = () => {
         <Box
             sx={{
                 marginTop: 5,
-                height: 700,
+                maxHeight: '85%',
             }}
             id={'consulting'}
         >
