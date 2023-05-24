@@ -1,4 +1,4 @@
-import { Grid, Paper, Typography } from '@mui/material'
+import { Grid, Box } from '@mui/material'
 import Image from 'next/image'
 
 type ImageProps = {
@@ -8,22 +8,17 @@ type ImageProps = {
 const ImageComponent: React.FC<ImageProps> = ({ image }) => {
   return (
     <Grid item xs={12} sm={6} md={4}>
-      <Paper>       
-          <Image
-            loading='lazy'
-            src={image.url}
-            alt={image.title}
-            width={610}
-            height={850}
-            style={{        
-              objectFit: 'fill',
-              aspectRatio: '1 / 1'
-            }}
-           
-          />
-          <Typography variant="h4">{image.title}</Typography>
-          <Typography variant="subtitle1">{image.description}</Typography>
-      </Paper>
+      <Image
+        loading='lazy'
+        src={image.url}
+        alt={image.title}
+        width={500}
+        height={650}
+        style={{
+          objectFit: 'contain',
+        }}
+
+      />
     </Grid>
   )
 }
@@ -37,16 +32,31 @@ const ImageGrid: React.FC<ImageGridProps> = () => {
     { url: "/14.jpeg", title: "Imagen 3", description: "Postre" },
   ];
   return (
-    <Grid
-      container
-      rowSpacing={1}
-      columnSpacing={{ xs: 1, sm: 2, md: 1 }}
-    >
-      {images.map((image) => (
-        <ImageComponent key={image.title} image={image} />
-      ))}
+    <Box sx={{
+      width: {
+        xs: '100%',
+        sm: '100%',
+        md: '100%',
+      },
+      border: {
+        xs: '2px solid green',
+        sm: '2px solid yellow',
+        md: '2px solid blue',
+        lg: '2px solid red',
+        xl: '2px solid orange'
+      }
+    }}>
+      <Grid
+        container
+        rowSpacing={1}
+        columnSpacing={{ xs: 1, sm: 2, md: 1, lg: 2 }}
+      >
+        {images.map((image) => (
+          <ImageComponent key={image.title} image={image} />
+        ))}
 
-    </Grid>
+      </Grid>
+    </Box>
   )
 }
 
