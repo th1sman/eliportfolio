@@ -17,7 +17,6 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                         component="img"
                         sx={{
                             height: "80%",
-
                         }}
                         image="/11.jpeg"
                     />

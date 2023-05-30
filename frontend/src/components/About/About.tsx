@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material'
 import FloatingShadowBox from '../FloatingShadowBox'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 
 
 const About: React.FC = () => {
@@ -8,24 +8,24 @@ const About: React.FC = () => {
     return (
         <Box sx={{
             width: {
-                xs: '600px',
+                xs: '850px',
                 sm: '100vw',
                 md: '100%'
             },
-            border: {
-                xs: '1px solid green',
-                sm: '1px solid yellow',
-                md: '1px solid red'
-            }
+            height: {
+                xs: '100%',
+                sm: '600px',
+            },
         }}
             id={'about'}>
             <Grid container>
                 <Grid item xs={12} sm={6} md={6} lg={6} textAlign='center'>
                     <FloatingShadowBox>
                         <Image
+                            layout='responsive'
                             src={'/3.jpeg'}
                             alt={'Imagen About'}
-                            width={550}
+                            width={800}
                             height={550}
                             priority
 
@@ -33,12 +33,11 @@ const About: React.FC = () => {
                     </FloatingShadowBox>
                     <Box sx={{
                         width: {
-                            xs: '600px',
+                            xs: '100%',
                             sm: '500px',
-                            md: '750px',
-                            lg: '500px',
+                            md: '100%',
+                            lg: '100%',
                         },
-                        border: '2px solid green',
                         paddingBottom: '20px',
                         borderRadius: '0.55em',
                         cursor: 'pointer',
@@ -64,10 +63,10 @@ const About: React.FC = () => {
                 <Grid item xs={12} sm={6} md={6} textAlign="center" alignContent="center">
                     <Box sx={{
                         width: {
-                            xs: '600px',
+                            xs: '100%',
                             sm: '200px',
                             md: '100%',
-                            lg: '500px',
+                            lg: '100%',
                         },
                         borderRadius: '0.55em',
                         cursor: 'pointer',
@@ -91,8 +90,9 @@ const About: React.FC = () => {
                         <FloatingShadowBox>
                             <Image
                                 src={'/12.jpeg'}
+                                layout='responsive'
                                 alt={'Imagen About'}
-                                width={500}
+                                width={800}
                                 height={500}
                                 priority
                             />
