@@ -10,23 +10,26 @@ const About: React.FC = () => {
             width: {
                 xs: '850px',
                 sm: '100vw',
-                md: '100%'
+                md: '100%',
+                lg: '100%',
             },
             height: {
-                xs: '100%',
+                xs: '200vh',
                 sm: '600px',
-            },
+                md: '600px',
+                lg: '700px'
+            }
         }}
             id={'about'}>
             <Grid container>
-                <Grid item xs={12} sm={6} md={6} lg={6} textAlign='center'>
+                <Grid p={5} item xs={12} sm={6} md={6} lg={6} textAlign='center'>
                     <FloatingShadowBox>
                         <Image
                             layout='responsive'
                             src={'/3.jpeg'}
                             alt={'Imagen About'}
-                            width={800}
-                            height={550}
+                            width={700}
+                            height={500}
                             priority
 
                         />
@@ -38,7 +41,7 @@ const About: React.FC = () => {
                             md: '100%',
                             lg: '100%',
                         },
-                        paddingBottom: '20px',
+                        paddingTop: '20px',
                         borderRadius: '0.55em',
                         cursor: 'pointer',
                         color: 'white',
@@ -46,15 +49,16 @@ const About: React.FC = () => {
                     >
                         <Typography
                             paragraph={true}
-                            variant="body1"
+                            variant="body2"
                             sx={{
                                 fontStyle: 'italic',
                                 fontFamily: 'Poppins'
                             }}>
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Cursus in hac habitasse platea dictumst quisque sagittis. Nisl vel pretium lectus quam id leo. Phasellus
-                            egestas tellus rutrum tellus. Porta non pulvinar neque laoreet suspendisse interdum.
+                            Mi nombre es Eliezer Jara Castillo
+                            Chef Profesional con experiencia en el rubro Horeca (Hoteles, Restaurantes, Cafeterias)
+                            Actualmente me desempeño como Chef Consultor, asesorando a pequeños y medianos emprendedores a rentabilizar de mejor manera sus negocios de AA.BB.
+                            Determinando planes de acción para lograr Objetivos claros desde la operación y administración de tu negocio, visualizando resultados positivos en menor tiempo
+
                         </Typography>
 
                     </Box>
@@ -80,10 +84,10 @@ const About: React.FC = () => {
                                 fontStyle: 'italic',
                                 fontFamily: 'Poppins'
                             }}>
-                            Mi nombre es Eliezer Jara Castillo
-                            Chef Profesional con experiencia en el rubro Horeca (Hoteles, Restaurantes, Cafeterias)
-                            Actualmente me desempeño como Chef Consultor, asesorando a pequeños y medianos emprendedores a rentabilizar de mejor manera sus negocios de AA.BB.
-                            Determinando planes de acción para lograr Objetivos claros desde la operación y administración de tu negocio, visualizando resultados positivos en menor tiempo
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Cursus in hac habitasse platea dictumst quisque sagittis. Nisl vel pretium lectus quam id leo. Phasellus
+                            egestas tellus rutrum tellus. Porta non pulvinar neque laoreet suspendisse interdum.
                         </Typography>
                     </Box>
                     <Box>
@@ -92,8 +96,8 @@ const About: React.FC = () => {
                                 src={'/12.jpeg'}
                                 layout='responsive'
                                 alt={'Imagen About'}
-                                width={800}
-                                height={500}
+                                width={700}
+                                height={400}
                                 priority
                             />
                         </FloatingShadowBox>

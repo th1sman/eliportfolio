@@ -1,61 +1,52 @@
-import { Box, Paper, Grid, Button, Card, CardContent, CardMedia, Typography } from '@mui/material'
+import { Box, Grid, Button, Typography } from '@mui/material'
+import Image from 'next/legacy/image'
+
 
 export interface ConsultingInterface { }
 
 const Consulting: React.FC<ConsultingInterface> = () => {
     return (
-        <Box
-            sx={{
-                marginTop: 5,
-                maxHeight: '85%',
-            }}
+        <Box sx={{
+            width: {
+                xs: '850px',
+                sm: '100vw',
+                md: '100%'
+            },
+            height: {
+                xs: '700vh',
+                sm: '900px',
+                md: '900px'
+            },
+        }}
             id={'consulting'}
         >
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={6} md={4} textAlign="center">
-                    <CardMedia
-                        component="img"
-                        sx={{
-                            height: "80%",
-                        }}
-                        image="/11.jpeg"
+                    <Image
+                        layout='responsive'
+                        src={'/16.jpeg'}
+                        alt={'Consulting1'}
+                        width={800}
+                        height={900}
                     />
-                    <Typography variant='subtitle1' sx={{
-                        fontStyle: 'italic',
-                        fontFamily: 'Poppins',
-                        fontSize: '1.1em'
-                    }}>
-                        Gestión de proveedores
-                    </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} textAlign="center">
-                    <CardMedia
-                        component="img"
-                        sx={{ height: "80%" }}
-                        image="/8.jpeg"
+                    <Image
+                        layout='responsive'
+                        src={'/10.jpeg'}
+                        alt={'Consulting2'}
+                        width={800}
+                        height={900}
                     />
-                    <Typography variant='subtitle1' sx={{
-                        fontStyle: 'italic',
-                        fontFamily: 'Poppins',
-                        fontSize: '1.1em'
-                    }}>
-                        Cambios y Costeo  de carta segun estacionalidad y target.
-                    </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} textAlign="center">
-                    <CardMedia
-                        component="img"
-                        sx={{ height: "80%" }}
-                        image="/10.jpeg"
+                    <Image
+                        layout='responsive'
+                        src={'/43.jpeg'}
+                        alt={'Consulting3'}
+                        width={800}
+                        height={900}
                     />
-                    <Typography
-                        variant='subtitle1' sx={{
-                            fontStyle: 'italic',
-                            fontFamily: 'Poppins',
-                            fontSize: '1.1em'
-                        }}>
-                        Capacitaciones para el personal
-                    </Typography>
                 </Grid>
             </Grid>
         </Box >

@@ -1,9 +1,11 @@
 import { Grid, Box } from '@mui/material'
 import Image from 'next/legacy/image'
+import './Home.module.css'
 
 type ImageProps = {
-  image: { url: string; title: string; description: string }
+  image: { url: string; title: string; }
 }
+
 
 const ImageComponent: React.FC<ImageProps> = ({ image }) => {
   return (
@@ -14,11 +16,12 @@ const ImageComponent: React.FC<ImageProps> = ({ image }) => {
         src={image.url}
         alt={image.title}
         width={800}
+        className={'image'}
         height={1100}
         style={{
-          objectFit: 'contain',
+          border: '5px solid black',
+          objectFit: 'contain'
         }}
-
       />
     </Grid>
   );
@@ -28,9 +31,9 @@ export interface ImageGridProps { }
 
 const ImageGrid: React.FC<ImageGridProps> = () => {
   const images = [
-    { url: "/4.jpeg", title: "Imagen 1", description: "Verduras" },
-    { url: "/7.jpeg", title: "Imagen 2", description: "Vino" },
-    { url: "/14.jpeg", title: "Imagen 3", description: "Postre" },
+    { url: "/4.jpeg", title: "Imagen 1" },
+    { url: "/7.jpeg", title: "Imagen 2" },
+    { url: "/14.jpeg", title: "Imagen 3" }
   ];
   return (
     <Box sx={{
@@ -43,7 +46,8 @@ const ImageGrid: React.FC<ImageGridProps> = () => {
         xs: '100%',
         sm: '100%',
         md: '100vh',
-
+        lg: '100vh',
+        xl: '100vh'
       },
     }}>
       <Grid
