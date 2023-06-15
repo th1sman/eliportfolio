@@ -22,6 +22,7 @@ const Dinners: React.FC = () => {
         xl: '100%',
       }
     }}>
+
       <ImageList variant='quilted' cols={4} >
         {ItemData.map((item) => (
           <ImageListItem key={item.img} />

@@ -8,3 +8,10 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+
+@media (max-width: 390px) {
+    .image {
+        width: 820px;
+        height: auto;
+    }
+}
