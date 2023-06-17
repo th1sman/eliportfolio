@@ -3,7 +3,6 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { ItemData } from './Galleries';
 import Image from 'next/image';
-import { GalleryModal } from '../GalleryModal';
 
 
 const Dinners: React.FC = () => {
@@ -20,12 +19,14 @@ const Dinners: React.FC = () => {
         sm: '500px',
         md: '340px',
         xl: '100%',
-      }
+      },
     }}>
 
       <ImageList variant='quilted' cols={4} >
         {ItemData.map((item) => (
-          <ImageListItem key={item.img} />
+          <ImageListItem key={item.img}>
+            <Image src={item.img} alt={item.title} width={300} height={400} />
+          </ImageListItem>
         ))}
       </ImageList>
     </Box>

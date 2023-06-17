@@ -12,9 +12,7 @@ function App() {
             <Navbar />
             <LayoutContainer>
                 <About />
-                <Consulting />
                 <Dinners />
-                <Footer />
             </LayoutContainer>
         </>
     )

@@ -32,7 +32,7 @@ const ImageGrid: React.FC<ImageGridProps> = () => {
   const images = [
     { url: "/4.jpeg", title: "Imagen 1" },
     { url: "/7.jpeg", title: "Imagen 2" },
-    { url: "/14.jpeg", title: "Imagen 3" }
+    { url: "/16.jpeg", title: "Imagen 3" }
   ];
   return (
     <Box sx={{

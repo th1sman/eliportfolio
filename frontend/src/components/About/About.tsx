@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material'
 import FloatingShadowBox from '../FloatingShadowBox'
-import Image from 'next/legacy/image'
-
+import Image from 'next/image'
+import style from './About.module.css'
 
 const About: React.FC = () => {
 
@@ -14,94 +14,66 @@ const About: React.FC = () => {
                 lg: '100%',
             },
             height: {
-                xs: '200vh',
+                xs: '500vh',
                 sm: '600px',
                 md: '600px',
-                lg: '700px'
+                lg: '850px'
             }
         }}
             id={'about'}>
             <Grid container>
-                <Grid p={5} item xs={12} sm={6} md={6} lg={6} textAlign='center'>
-                    <FloatingShadowBox>
-                        <Image
-                            layout='responsive'
-                            src={'/3.jpeg'}
-                            alt={'Imagen About'}
-                            width={700}
-                            height={500}
-                            priority
-
-                        />
-                    </FloatingShadowBox>
-                    <Box sx={{
+                <Grid item xs={12} sm={6} md={6} lg={6} textAlign='center'>
+                    <Box className={style.image} sx={{
                         width: {
-                            xs: '100%',
+                            xs: '500px',
                             sm: '500px',
-                            md: '100%',
-                            lg: '100%',
+                            md: '500px',
+                            lg: '100%'
                         },
-                        paddingTop: '20px',
-                        borderRadius: '0.55em',
-                        cursor: 'pointer',
-                        color: 'white',
-                    }}
-                    >
-                        <Typography
-                            paragraph={true}
-                            variant="body2"
-                            sx={{
-                                fontStyle: 'italic',
-                                fontFamily: 'Poppins'
-                            }}>
-                            Mi nombre es Eliezer Jara Castillo
-                            Chef Profesional con experiencia en el rubro Horeca (Hoteles, Restaurantes, Cafeterias)
-                            Actualmente me desempeño como Chef Consultor, asesorando a pequeños y medianos emprendedores a rentabilizar de mejor manera sus negocios de AA.BB.
-                            Determinando planes de acción para lograr Objetivos claros desde la operación y administración de tu negocio, visualizando resultados positivos en menor tiempo
-
+                        height: {
+                            xs: '500px',
+                            sm: '500px',
+                            md: '500px',
+                            lg: '400px'
+                        },
+                        paddingTop: {
+                            lg: '100px'
+                        },
+                        border: '2px solid green',
+                    }}>
+                        <Typography variant='h5'>
+                            Rubro horeca como empresa de consultorias, se enfoca en llevar
+                            a un punto de estabilidad la rentabiliad de un negocio de AA.BB
                         </Typography>
-
+                        <Typography variant='body1'>
+                            Trabajamos con un plan de acción, en donde se determinan puntos
+                            criticos en el caul el negocio esta filtrando activos, o bien areas
+                            que se pueden mejorar para generar una mejor experiencia a su potencial
+                            cliente y para lograr obtener mejor margen de utilidad desde la operacion.
+                        </Typography>
                     </Box>
+
 
                 </Grid>
                 <Grid item xs={12} sm={6} md={6} textAlign="center" alignContent="center">
                     <Box sx={{
                         width: {
-                            xs: '100%',
-                            sm: '200px',
-                            md: '100%',
-                            lg: '100%',
+                            xs: '500px',
+                            sm: '500px',
+                            md: '500px',
+                            lg: '100%'
                         },
-                        borderRadius: '0.55em',
-                        cursor: 'pointer',
-                        color: 'white',
-                    }}
-                    >
-                        <Typography
-                            paragraph={true}
-                            variant="body1"
-                            sx={{
-                                fontStyle: 'italic',
-                                fontFamily: 'Poppins'
-                            }}>
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Cursus in hac habitasse platea dictumst quisque sagittis. Nisl vel pretium lectus quam id leo. Phasellus
-                            egestas tellus rutrum tellus. Porta non pulvinar neque laoreet suspendisse interdum.
-                        </Typography>
+                        height: {
+                            xs: '500px',
+                            sm: '500px',
+                            md: '500px',
+                            lg: '500px'
+                        },
+                        border: '2px solid green'
+                    }}>
+
                     </Box>
-                    <Box>
-                        <FloatingShadowBox>
-                            <Image
-                                src={'/12.jpeg'}
-                                layout='responsive'
-                                alt={'Imagen About'}
-                                width={700}
-                                height={400}
-                                priority
-                            />
-                        </FloatingShadowBox>
-                    </Box>
+
                 </Grid>
 
             </Grid>
