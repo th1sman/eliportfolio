@@ -17,7 +17,7 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                 xs: '250vh',
                 sm: '900px',
                 md: '900px',
-                lg: '700px'
+                lg: '850px'
             }
         }}
             id={'consulting'}
