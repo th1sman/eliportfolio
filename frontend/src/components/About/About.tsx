@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Box, Grid, Typography } from '@mui/material'
 import style from './About.module.css'
+import FloatingShadowBox from '../FloatingShadowBox'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
@@ -18,13 +19,14 @@ const About: React.FC = () => {
                 lg: '100%',
             },
             height: {
-                xs: '500vh',
+                xs: '200vh',
                 sm: '600px',
                 md: '600px',
-                lg: '850px'
-            }
-        }}
+                lg: '95vh',
+            },
+        }}  
             id={'about'}>
+            <FloatingShadowBox>
             <Grid container>
                 <Grid item xs={12} sm={6} md={6} lg={6} textAlign='center'>
                     <Box className={style.image} sx={{
@@ -38,11 +40,8 @@ const About: React.FC = () => {
                             xs: '500px',
                             sm: '500px',
                             md: '500px',
-                            lg: '400px'
+                            lg: '90vh'
                         },
-                        paddingTop: {
-                            lg: '100px'
-                        }
                     }}>
                         <Box className={style.container}>
                             <Typography variant='h5' className={style.phrase} fontFamily="Poppins">
@@ -54,6 +53,12 @@ const About: React.FC = () => {
                                 criticos en el cual el negocio esta filtrando activos, o bien areas
                                 que se pueden mejorar para generar una mejor experiencia a su potencial
                                 cliente y para lograr obtener mejor margen de utilidad desde la operación.
+                            </Typography>
+                            <Typography variant='body1' className={style.phrase} fontFamily="Poppins">
+                                Somos concientes que desde nuestra labor no solo podemos mejorar su empresa de AA.BB, sino que 
+                                dentro de nuestra planificación capacitamos a su personal con metodos informales de Mindfullnes,
+                                fortaleciendo y asegurando el trabajo en equipo y formando lideres para que su empresa pueda crear un
+                                proposito frente a la sociedad mucho mas sustentable y sostenible en el tiempo.
                             </Typography>
                         </Box>
                     </Box>
@@ -73,63 +78,11 @@ const About: React.FC = () => {
                             lg: '500px'
                         },
                     }}>
-                        <List disablePadding>
-                            <ListItem alignItems='flex-start'>
-                                <NextWeekIcon className={style.itemIcon} />
-                                <ListItemText className={style.itemText} primary={
-                                    <React.Fragment>
-                                        <Typography
-                                            textAlign='justify'
-                                            variant="h5"
-                                        >
-                                            Trabajamos con un plan de acción
-                                        </Typography>
-                                    </React.Fragment>
-                                }
-                                    secondary={
-                                        <React.Fragment>
-                                            <Typography
-                                                textAlign='justify'
-                                                variant="body2"
-                                            >
-                                                En donde se determinan puntos criticos en el cual el  negocio esta filtrando activos, o bien areas que se pueden mejorar para generar una mejor experiencia
-                                                a su potencial cliente y para lograr obtener mejor margen de utilidad desde la operación.
-                                            </Typography>
-                                        </React.Fragment>
-                                    }
-                                />
-                            </ListItem>
-                            <Divider component='li' />
-                            <ListItem alignItems='flex-start'>
-                                <WorkHistoryRoundedIcon className={style.itemIcon} />
-                                <ListItemText className={style.itemText} primary={
-                                    <React.Fragment>
-                                        <Typography
-                                            textAlign='justify'
-                                            variant="h5"
-                                        >
-                                            Trabajamos con un plan de acción
-                                        </Typography>
-                                    </React.Fragment>
-                                }
-                                    secondary={
-                                        <React.Fragment>
-                                            <Typography
-                                                textAlign='justify'
-                                                variant="body2"
-                                            >
-                                                En donde se determinan puntos criticos en el cual el  negocio esta filtrando activos, o bien areas que se pueden mejorar para generar una mejor experiencia
-                                                a su potencial cliente y para lograr obtener mejor margen de utilidad desde la operación.
-                                            </Typography>
-                                        </React.Fragment>
-                                    }
-                                />
-                            </ListItem>
-                        </List>
                     </Box>
                 </Grid>
 
             </Grid>
+            </FloatingShadowBox>
         </Box>
     )
 }

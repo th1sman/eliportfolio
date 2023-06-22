@@ -1,3 +1,9 @@
-.image {
-    height: 340px;
+.galleryContainer{ 
+    padding-top: 100px;
+    spacing: 20px;
+}
+
+.cardImage {
+    width: 600px;
+    height: 500px;
 }

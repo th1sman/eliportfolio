@@ -75,20 +75,6 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
                             <Link
-                                activeClass='active'
-                                to="dinners"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={100}
-                            >
-                                Cenas
-                            </Link>
-                        </ListItemText>
-                    </ListItemButton>
-                    <ListItemButton sx={{ textAlign: 'center' }}>
-                        <ListItemText>
-                            <Link
                                 to='contact'
                                 activeClass='active'
                                 spy={true}
@@ -96,7 +82,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 offset={-70}
                                 duration={100}
                                 onClick={() => scroll.scrollToBottom()}>
-                                Contacto
+                                Cenas
                             </Link>
                         </ListItemText>
                     </ListItemButton>
@@ -174,25 +160,13 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                         <IconButton>
                             <Link
                                 activeClass='active'
-                                to="dinners"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                <Typography sx={{ color: '#DCDBC7' }}>Cenas</Typography>
-                            </Link>
-                        </IconButton>
-                        <IconButton>
-                            <Link
-                                activeClass='active'
                                 to="contact"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
                                 onClick={() => scroll.scrollToBottom()}>
-                                <Typography sx={{ color: '#DCDBC7' }}>Contacto</Typography>
+                                <Typography sx={{ color: '#DCDBC7' }}>Cenas</Typography>
                             </Link>
                         </IconButton>
                     </Box>

@@ -1,17 +1,25 @@
 .image {
-    transition: filter .5s ease-in-out;
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
+  transition: filter 0.5s ease-in-out;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 .image:hover {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+@media (min-width: 1300px) {
+  .image {
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 @media (max-width: 390px) {
-    .image {
-        width: 840px;
-        height: auto;
-    }
+  .image {
+    width: 840px;
+    height: auto;
+  }
 }

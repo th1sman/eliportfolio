@@ -3,7 +3,6 @@ import { Home } from "../components/Home";
 import { About } from '../components/About'
 import { Dinners } from "../components/Dinners";
 import { Consulting } from "../components/Consulting";
-import { Footer } from '@/components/Footer'
 import { Navbar } from "@/components/Navbar";
 
 
@@ -19,7 +18,6 @@ export default function Main() {
             <About />
             <Consulting />
             <Dinners />
-            <Footer />
         </>
     )
 }
