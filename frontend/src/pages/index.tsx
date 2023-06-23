@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Home } from "../components/Home";
 import { About } from '../components/About'
-import { Dinners } from "../components/Dinners";
+import { Dinners } from "./Dinners";
 import { Consulting } from "../components/Consulting";
 import { Navbar } from "@/components/Navbar";
 

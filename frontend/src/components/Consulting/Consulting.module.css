@@ -24,7 +24,12 @@
   opacity: 1;
 }
 
-.image:hover {
+
+@media (min-width: 1300px) {
+  .image {
+    width: 400px;
+    height: auto;
+  }
 }
 
 @media (max-width: 390px) {

@@ -11,8 +11,8 @@
 
 @media (min-width: 1300px) {
   .image {
-    width: 600px;
-    height: auto;
+    width: 420px;
+    height: 95vh;
     object-fit: contain;
   }
 }

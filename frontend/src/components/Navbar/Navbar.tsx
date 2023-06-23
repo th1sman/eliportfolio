@@ -120,7 +120,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                             offset={-70}
                             duration={500}
                         >
-                            <Button sx={{ fontFamily: 'Dancing Script', fontSize: '1.2em', color: '#d7d7c3' }} onClick={() => scroll.scrollToTop()}>
+                            <Button sx={{ fontFamily: 'Poppins', fontSize: '1.2em', color: '#d7d7c3' }} onClick={() => scroll.scrollToTop()}>
                                 RubroHoreca
                             </Button>
                             <Image
@@ -160,12 +160,12 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                         <IconButton>
                             <Link
                                 activeClass='active'
-                                to="contact"
+                                to="Dinners"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
-                                onClick={() => scroll.scrollToBottom()}>
+                            >
                                 <Typography sx={{ color: '#DCDBC7' }}>Cenas</Typography>
                             </Link>
                         </IconButton>
@@ -175,7 +175,6 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
             </AppBar>
             <Box component='nav'>
                 <Drawer
-
                     container={container}
                     variant='temporary'
                     open={mobile}

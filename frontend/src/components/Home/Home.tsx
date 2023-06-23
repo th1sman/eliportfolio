@@ -42,7 +42,7 @@ const ImageGrid: React.FC<ImageGridProps> = () => {
         md: '100%',
       },
       height: {
-        xs: '100%',
+        xs: '450vh',
         sm: '100%',
         md: '100vh',
         lg: '100vh',

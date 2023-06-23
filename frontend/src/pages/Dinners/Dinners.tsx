@@ -1,12 +1,12 @@
 import Box from '@mui/material/Box'
-import  Grid from '@mui/material/Grid/Grid';
-import Button from '@mui/material/Button/Button';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import CardActionArea from '@mui/material/CardActionArea/CardActionArea';
-import CardActions from '@mui/material/CardActions/CardActions';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card/Card';
+import Card from '@mui/material/Card';
 import styled from './dinners.module.css'
 
 
@@ -14,21 +14,35 @@ const Dinners: React.FC = () => {
   return (
     <Box sx={{
       width: {
-        xs: '100%',
+        xs: '900px',
         sm: '500px',
         md: '340px',
         lg: '100%',
       },
       height: {
-        xs: '120px',
+        xs: '900px',
         sm: '500px',
-        md: '340px',
+        md: '500px',
         lg: '900px',
       },
-    }}>
-      <Grid container className={styled.galleryContainer}>
+    }}
+      id={'Dinners'}>
+
+      <Grid container spacing={2} className={styled.galleryContainer}>
         <Grid item xs={12} sm={6} md={4} >
-          <Card sx={{ width: 600, height: 640 }}>
+          <Card sx={{
+            width: {
+              xs: '600px',
+              sm: '300px',
+              md: '200px',
+              lg: 'auto',
+            }, height: {
+              xs: '80vh',
+              sm: '70vh',
+              md: '70vh',
+              lg: 'auto'
+            }
+          }} >
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -53,7 +67,19 @@ const Dinners: React.FC = () => {
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card sx={{ width: 600, height: 640 }}>
+          <Card sx={{
+            width: {
+              xs: '600px',
+              sm: '300px',
+              md: '200px',
+              lg: 'auto',
+            }, height: {
+              xs: '80vh',
+              sm: '70vh',
+              md: '70vh',
+              lg: 'auto'
+            },
+          }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -80,7 +106,19 @@ const Dinners: React.FC = () => {
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card sx={{ width: 600, height: 640 }}>
+          <Card sx={{
+            width: {
+              xs: '600px',
+              sm: '300px',
+              md: '200px',
+              lg: 'auto',
+            }, height: {
+              xs: '80vh',
+              sm: '70vh',
+              md: '70vh',
+              lg: 'auto'
+            }
+          }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -98,10 +136,10 @@ const Dinners: React.FC = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" variant='contained' color="primary">
-                  Ver Galeria
-                </Button>
-              </CardActions>
+              <Button size="small" variant='contained' color="primary">
+                Ver Galeria
+              </Button>
+            </CardActions>
           </Card>
         </Grid>
       </Grid>
