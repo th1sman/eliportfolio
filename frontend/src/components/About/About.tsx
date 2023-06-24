@@ -8,12 +8,18 @@ import ListItemText from '@mui/material/ListItemText'
 import Divider from '@mui/material/Divider'
 import NextWeekIcon from '@mui/icons-material/NextWeek';
 import WorkHistoryRoundedIcon from '@mui/icons-material/WorkHistoryRounded';
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
+
+
 
 const About: React.FC = () => {
+
+    const videoUrl = '/video.mp4'
+
     return (
         <Box sx={{
             width: {
-                xs: '850px',
+                xs: '230vw',
                 sm: '100vw',
                 md: '100%',
                 lg: '100%',
@@ -66,7 +72,7 @@ const About: React.FC = () => {
                     <Grid item xs={12} sm={6} md={6} textAlign="center" alignContent="center">
                         <Box sx={{
                             width: {
-                                xs: '500px',
+                                xs: '550px',
                                 sm: '500px',
                                 md: '500px',
                                 lg: '100%'
@@ -78,6 +84,7 @@ const About: React.FC = () => {
                                 lg: '500px'
                             }
                         }}>
+                        <VideoPlayer src={videoUrl} />
                         </Box>
                     </Grid>
                 </Grid>

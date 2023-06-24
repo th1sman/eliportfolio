@@ -17,10 +17,6 @@ const ImageComponent: React.FC<ImageProps> = ({ image }) => {
         width={420}
         height={630}
         className={styles.image}
-        style={{
-          objectFit: 'cover',
-          objectPosition: '50% 50%',
-        }}
       />
     </Grid>
   );
@@ -37,21 +33,19 @@ const ImageGrid: React.FC<ImageGridProps> = () => {
   return (
     <Box sx={{
       width: {
-        xs: '100%',
+        xs: '230vw',
         sm: '100%',
         md: '100%',
       },
       height: {
-        xs: '450vh',
+        xs: '500vh',
         sm: '100%',
         md: '100vh',
         lg: '100vh',
-      },
+      }
     }}>
       <Grid
         container
-        rowSpacing={1}
-        columnSpacing={{ xs: 2, sm: 2, md: 1, lg: 2 }}
       >
         {images.map((image) => (
           <ImageComponent key={image.title} image={image} />

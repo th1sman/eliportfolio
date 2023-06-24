@@ -20,19 +20,18 @@ const Dinners: React.FC = () => {
         lg: '100%',
       },
       height: {
-        xs: '900px',
+        xs: '250vh',
         sm: '500px',
         md: '500px',
         lg: '900px',
       },
     }}
       id={'Dinners'}>
-
       <Grid container spacing={2} className={styled.galleryContainer}>
-        <Grid item xs={12} sm={6} md={4} >
+        <Grid item xs={5} sm={6} md={4} >
           <Card sx={{
             width: {
-              xs: '600px',
+              xs: '880px',
               sm: '300px',
               md: '200px',
               lg: 'auto',
@@ -40,7 +39,7 @@ const Dinners: React.FC = () => {
               xs: '80vh',
               sm: '70vh',
               md: '70vh',
-              lg: 'auto'
+              lg: '60vh'
             }
           }} >
             <CardActionArea>
@@ -69,7 +68,7 @@ const Dinners: React.FC = () => {
         <Grid item xs={12} sm={6} md={4}>
           <Card sx={{
             width: {
-              xs: '600px',
+              xs: '880px',
               sm: '300px',
               md: '200px',
               lg: 'auto',
@@ -77,7 +76,7 @@ const Dinners: React.FC = () => {
               xs: '80vh',
               sm: '70vh',
               md: '70vh',
-              lg: 'auto'
+              lg: '60vh'
             },
           }}>
             <CardActionArea>
@@ -108,7 +107,7 @@ const Dinners: React.FC = () => {
         <Grid item xs={12} sm={6} md={4}>
           <Card sx={{
             width: {
-              xs: '600px',
+              xs: '880px',
               sm: '300px',
               md: '200px',
               lg: 'auto',
@@ -116,7 +115,7 @@ const Dinners: React.FC = () => {
               xs: '80vh',
               sm: '70vh',
               md: '70vh',
-              lg: 'auto'
+              lg: '60vh'
             }
           }}>
             <CardActionArea>

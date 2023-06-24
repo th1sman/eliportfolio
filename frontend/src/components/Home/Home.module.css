@@ -1,7 +1,7 @@
 .image {
-  transition: filter 0.5s ease-in-out;
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .image:hover {
@@ -9,9 +9,9 @@
   filter: grayscale(100%);
 }
 
-@media (min-width: 1300px) {
+@media (max-width: 1300px) {
   .image {
-    width: 420px;
+    width: 400px;
     height: 95vh;
     object-fit: contain;
   }
@@ -19,7 +19,7 @@
 
 @media (max-width: 390px) {
   .image {
-    width: 840px;
+    width: 100%;
     height: auto;
   }
 }

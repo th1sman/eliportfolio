@@ -5,7 +5,7 @@
 .cardImage {
     width: 600px;
     transition: transform 0.8s;
-    height: 450px;
+    height: 500px;
 }
 
 .galleryContainer:hover .cardImage {
@@ -14,18 +14,23 @@
 
 @media (min-width: 1300px) {
     .galleryContainer {
-        border: 2px solid red;
+        
     }
 
     .cardImage {
         width: 100%;
-        height: 400px;
+        height: 420px;
         border-image: space;
     }
 }
 
 @media (max-width: 390px) {
-    .image {
-        width: fit-content;
+    .cardImage {
+        border: 2px solid green;
+        width: 100%;
+    }
+
+    .galleryContainer {
+        width: 100%;
     }
 }
