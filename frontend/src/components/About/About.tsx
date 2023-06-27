@@ -2,15 +2,7 @@ import * as React from 'react'
 import { Box, Grid, Typography, Button } from '@mui/material'
 import style from './About.module.css'
 import FloatingShadowBox from '../FloatingShadowBox'
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemText from '@mui/material/ListItemText'
-import Divider from '@mui/material/Divider'
-import NextWeekIcon from '@mui/icons-material/NextWeek';
-import WorkHistoryRoundedIcon from '@mui/icons-material/WorkHistoryRounded';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
-
-
 
 const About: React.FC = () => {
 
@@ -25,16 +17,16 @@ const About: React.FC = () => {
                 lg: '100%',
             },
             height: {
-                xs: '200vh',
-                sm: '600px',
+                xs: '220vh',
+                sm: '100vh',
                 md: '600px',
                 lg: '100vh',
-            }
+            },
         }}
             id={'about'}>
             <FloatingShadowBox>
                 <Grid container>
-                    <Grid item xs={12} sm={6} md={6} lg={6} textAlign='center'>
+                    <Grid item xs={12} sm={6} md={5} lg={6} textAlign='center'>
                         <Box className={style.image} sx={{
                             width: {
                                 xs: '500px',
@@ -72,7 +64,7 @@ const About: React.FC = () => {
                     <Grid item xs={12} sm={6} md={6} textAlign="center" alignContent="center">
                         <Box sx={{
                             width: {
-                                xs: '550px',
+                                xs: '100%',
                                 sm: '500px',
                                 md: '500px',
                                 lg: '100%'
@@ -81,10 +73,10 @@ const About: React.FC = () => {
                                 xs: '850px',
                                 sm: '500px',
                                 md: '500px',
-                                lg: '500px'
+                                lg: '100vh'
                             }
                         }}>
-                        <VideoPlayer src={videoUrl} />
+                            <VideoPlayer src={videoUrl} />
                         </Box>
                     </Grid>
                 </Grid>

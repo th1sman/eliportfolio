@@ -8,6 +8,7 @@ import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import styled from './dinners.module.css'
+import Modal from '@/components/Modal/Modal';
 
 
 const Dinners: React.FC = () => {
@@ -23,12 +24,13 @@ const Dinners: React.FC = () => {
         xs: '250vh',
         sm: '500px',
         md: '500px',
-        lg: '900px',
+        lg: '100vh',
       },
+      backgroundColor: '#EEE5E9'
     }}
       id={'Dinners'}>
       <Grid container spacing={2} className={styled.galleryContainer}>
-        <Grid item xs={5} sm={6} md={4} >
+        <Grid item xs={5} sm={6} md={4}>
           <Card sx={{
             width: {
               xs: '880px',
@@ -39,7 +41,7 @@ const Dinners: React.FC = () => {
               xs: '80vh',
               sm: '70vh',
               md: '70vh',
-              lg: '60vh'
+              lg: '85vh'
             }
           }} >
             <CardActionArea>
@@ -59,9 +61,7 @@ const Dinners: React.FC = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" variant='contained' color="primary">
-                Ver Galeria
-              </Button>
+              <Modal />
             </CardActions>
           </Card>
         </Grid>
@@ -76,7 +76,7 @@ const Dinners: React.FC = () => {
               xs: '80vh',
               sm: '70vh',
               md: '70vh',
-              lg: '60vh'
+              lg: '85vh'
             },
           }}>
             <CardActionArea>
@@ -115,7 +115,7 @@ const Dinners: React.FC = () => {
               xs: '80vh',
               sm: '70vh',
               md: '70vh',
-              lg: '60vh'
+              lg: '85vh'
             }
           }}>
             <CardActionArea>

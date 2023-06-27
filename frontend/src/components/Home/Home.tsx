@@ -1,6 +1,7 @@
 import { Grid, Box } from '@mui/material'
 import Image from 'next/image'
 import styles from './Home.module.css'
+import FloatingShadowBox from '../FloatingShadowBox'
 
 
 type ImageProps = {
@@ -16,6 +17,7 @@ const ImageComponent: React.FC<ImageProps> = ({ image }) => {
         alt={image.title}
         width={420}
         height={630}
+        priority={true}
         className={styles.image}
       />
     </Grid>
@@ -36,23 +38,27 @@ const ImageGrid: React.FC<ImageGridProps> = () => {
         xs: '230vw',
         sm: '100%',
         md: '100%',
+        lg: '100%',
       },
       height: {
-        xs: '500vh',
+        xs: '485vh',
         sm: '100%',
-        md: '100vh',
-        lg: '100vh',
+        md: '150vh',
+        lg: '110vh',
       }
     }}>
-      <Grid
-        container
-      >
-        {images.map((image) => (
-          <ImageComponent key={image.title} image={image} />
-        ))}
+      <FloatingShadowBox>
+        <Grid
+          container
+        >
+          {images.map((image) => (
+            <ImageComponent key={image.title} image={image} />
+          ))}
 
-      </Grid>
+        </Grid>
+      </FloatingShadowBox>
     </Box>
+
   )
 }
 

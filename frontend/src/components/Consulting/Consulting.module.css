@@ -1,21 +1,17 @@
 .image {
-  border-radius: 20px 5npm px 0px 10px;
-  width: 550px;
-  height: 350px;
+  border-radius: 2px 2px 2px 2px;
   transition: transform 0.8s ease;
 }
 
 .containerText {
-  padding: 2px;
-  height: 70vh;
   animation-delay: 1s;
 }
 
 .text {
   opacity: 0;
-  color: white;
+  color: #1F273C;
   font-size: 0.9em;
-  text-align: center;
+  text-align: justify;
   word-spacing: 0.2em;
   transition: opacity 0.3s ease-in-out;
 }
@@ -34,7 +30,7 @@
 
 @media (max-width: 390px) {
   .image {
-    width: 820px;
+    width: 100%;
     height: 520px;
   }
 

@@ -1,37 +1,39 @@
 import React from 'react'
-import { ImageList, ImageListItem } from '@mui/material'
-import Image from 'next/image';
+import Image from 'next/image'
+import Button from '@mui/material/Button'
+import styled from './gallery.module.css'
 
-interface ImageListProps {
-    cols: number;
-    rows: number;
-    img: string;
-    title: string;
+
+interface Gallery {
+    name: string;
+    coverImage: string;
+    thumbnails: string[];
 }
 
-const ImageListComponent: React.FC<ImageListProps> = ({
-    cols,
-    rows,
-    img,
-    title,
-}) => {
+interface GalleryModalProps {
+    gallery: Gallery;
+    onClose: () => void;
+}
+
+const GalleryModal: React.FC<GalleryModalProps> = ({ gallery, onClose }) => {
     return (
-        <ImageList sx={{ width: 500, height: 500 }}>
-            <ImageListItem
-                key={img}
-                cols={cols || 1}
-                rows={rows || 1}
-            >
+        <div className={styled.modal}>
+            <div className={styled.modalContent}>
+                <h2>{gallery.name}</h2>
                 <Image
-                    src={img}
-                    alt={title}
-                    style={{
-                        objectFit: 'cover'
-                    }}
+                    src={gallery.coverImage}
+                    alt={gallery.name}
+                    width={400}
+                    height={500}
+                    className={styled.modalImage}
                 />
-            </ImageListItem>
-        </ImageList>
+                {gallery.thumbnails.map((thumbnail, index) => (
+                    <Image key={index} src={thumbnail} width={100} height={100} alt={`Thumbnail ${index + 1}`} />
+                ))}
+                <Button variant='contained' onClick={onClose}>Cerrar</Button>
+            </div>
+        </div>
     )
 }
 
-export default ImageListComponent
+export default GalleryModal
