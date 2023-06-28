@@ -14,7 +14,7 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "5.13.6",
     "@mui/x-data-grid": "^5.17.24",
-    "@next/font": "13.1.6",
+    "@next/font": "13.4.4",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "formik": "^2.2.9",
