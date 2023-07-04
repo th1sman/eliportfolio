@@ -23,7 +23,7 @@
 
 @media (min-width: 1300px) {
   .image {
-    width: 400px;
+    width: 100%;
     height: auto;
   }
 }
@@ -39,6 +39,7 @@
   }
 
   .text {
-    line-height: 1.8;
+    line-height: 1.2;
+    font-size: 1.7em;
   }
 }

@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import Button from '@mui/material/Button'
 import styled from './gallery.module.css'
+import Box from '@mui/material/Box'
+
 
 
 interface Gallery {
@@ -17,9 +19,8 @@ interface GalleryModalProps {
 
 const GalleryModal: React.FC<GalleryModalProps> = ({ gallery, onClose }) => {
     return (
-        <div className={styled.modal}>
-            <div className={styled.modalContent}>
-                <h2>{gallery.name}</h2>
+        <Box className={styled.modal}>
+            <Box className={styled.modalContent}>
                 <Image
                     src={gallery.coverImage}
                     alt={gallery.name}
@@ -31,8 +32,8 @@ const GalleryModal: React.FC<GalleryModalProps> = ({ gallery, onClose }) => {
                     <Image key={index} src={thumbnail} width={100} height={100} alt={`Thumbnail ${index + 1}`} />
                 ))}
                 <Button variant='contained' onClick={onClose}>Cerrar</Button>
-            </div>
-        </div>
+            </Box>
+        </Box>
     )
 }
 
