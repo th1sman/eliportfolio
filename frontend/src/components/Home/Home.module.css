@@ -4,6 +4,12 @@
   object-fit: contain;
 }
 
+.secondImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .image:hover {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);

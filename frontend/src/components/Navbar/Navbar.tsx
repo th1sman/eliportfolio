@@ -12,7 +12,7 @@ import {
     ListItemText
 } from '@mui/material'
 import Image from 'next/image'
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import MenuIcon from '@mui/icons-material/Menu'
 import { useState } from 'react'
 
@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                 <ListItem disablePadding sx={{ display: 'block' }}>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
-                            <Link
+                            <ScrollLink
                                 activeClass='active'
                                 to="about"
                                 spy={true}
@@ -55,12 +55,12 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 duration={100}
                             >
                                 Sobre mi
-                            </Link>
+                            </ScrollLink>
                         </ListItemText>
                     </ListItemButton>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
-                            <Link
+                            <ScrollLink
                                 activeClass='active'
                                 to="consulting"
                                 spy={true}
@@ -69,13 +69,13 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 duration={100}
                             >
                                 Asesorias
-                            </Link>
+                            </ScrollLink>
                         </ListItemText>
                     </ListItemButton>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
-                            <Link
-                                to='contact'
+                            <ScrollLink
+                                to='Dinners'
                                 activeClass='active'
                                 spy={true}
                                 smooth={true}
@@ -83,7 +83,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 duration={100}
                                 onClick={() => scroll.scrollToBottom()}>
                                 Cenas
-                            </Link>
+                            </ScrollLink>
                         </ListItemText>
                     </ListItemButton>
                 </ListItem>
@@ -112,7 +112,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                         component='div'
                         sx={{ flexGrow: 1, color: '#DCDBC7', display: { xs: 'none', sm: 'block' } }}
                     >
-                        <Link
+                        <ScrollLink
                             activeClass='active'
                             to="/"
                             spy={true}
@@ -130,11 +130,11 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 height={45}
 
                             />
-                        </Link>
+                        </ScrollLink>
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <IconButton>
-                            <Link
+                            <ScrollLink
                                 activeClass='active'
                                 to="about"
                                 spy={true}
@@ -143,10 +143,10 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 duration={500}
                             >
                                 <Typography sx={{ color: '#DCDBC7' }}>Sobre mi</Typography>
-                            </Link>
+                            </ScrollLink>
                         </IconButton>
                         <IconButton>
-                            <Link
+                            <ScrollLink
                                 activeClass='active'
                                 to="consulting"
                                 spy={true}
@@ -155,10 +155,10 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 duration={500}
                             >
                                 <Typography sx={{ color: '#DCDBC7' }}>Asesorias</Typography>
-                            </Link>
+                            </ScrollLink>
                         </IconButton>
                         <IconButton>
-                            <Link
+                            <ScrollLink
                                 activeClass='active'
                                 to="Dinners"
                                 spy={true}
@@ -167,7 +167,7 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
                                 duration={500}
                             >
                                 <Typography sx={{ color: '#DCDBC7' }}>Cenas</Typography>
-                            </Link>
+                            </ScrollLink>
                         </IconButton>
                     </Box>
 

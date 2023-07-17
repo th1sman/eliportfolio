@@ -38,7 +38,7 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                         }}
                     />
 
-                    <Typography variant='h5' className={style.text} fontFamily="Poppins">
+                    <Typography variant='h5' className={style.text}>
                         Dentro de nuestra principal misión y visión como asesores
                         gastronómicos esta mejorar la alimentación y concientizar a
                         nuestra sociedad frente a distintos problemas que nos aquejan
@@ -57,7 +57,7 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                             objectPosition: '50% 50%',
                         }}
                     />
-                    <Typography variant='h5' className={style.text} fontFamily="Poppins">
+                    <Typography variant='h5' className={style.text} >
                         Como sociedad en el mundo tenemos hambrunas, pero a su vez
                         ilogicamente desechamos y desperdiciamos alimentos en inimaginables
                         cantidades.
@@ -75,7 +75,7 @@ const Consulting: React.FC<ConsultingInterface> = () => {
                             objectPosition: '50% 50%',
                         }}
                     />
-                    <Typography variant='h5' className={style.text} fontFamily="Poppins">
+                    <Typography variant='h5' className={style.text} >
                         Realizar propuestas de cartas y menus con una planificación
                         y asesoramiento en donde el desperdicio de alimentos sea muchisimo
                         menor, no solo mejorara su negocio y lo volvera mas rentable.
