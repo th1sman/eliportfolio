@@ -94,8 +94,8 @@ const Navbar: React.FC<NavbarInterface> = (props: Props) => {
     const container = window !== undefined ? () => window().document.body : undefined
 
     return (
-        <Box sx={{ display: 'flex' }}>
-            <AppBar position='fixed' component='nav' sx={{ backgroundColor: '#1F273C' }}>
+        <Box sx={{ display: 'flex', p: '10px' }}>
+            <AppBar component='nav' sx={{ backgroundColor: '#1F273C' }}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
