@@ -12,7 +12,7 @@ export const Section = styled.section`
 
 export const Container = styled.section`
   padding-top: 2rem
-  display: inline-flex
+  display: inline-flex  
   justify-content: center
   align-items: center
   flex-direction: column
