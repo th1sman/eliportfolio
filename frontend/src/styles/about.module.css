@@ -1,0 +1,28 @@
+.quote {
+  border-radius: 15px;
+  padding: 56px 16px 16px 16px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  background-color: #110603;
+  color: #9d8156;
+  height: 70svh;
+}
+
+.quote:hover {
+  transform: scale(0.98);
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 60svh;
+}
+
+.images > img {
+  object-fit: fill;
+  width: 25rem;
+  height: 50svh;
+}

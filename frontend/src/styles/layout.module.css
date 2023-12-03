@@ -1,0 +1,12 @@
+.gridContainer {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  grid-auto-flow: column;
+}
+
+@media (max-width: 600px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+}
