@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #110603;
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
@@ -63,6 +63,7 @@ footer {
   grid-row-end: 4;
   background-color: #333;
   color: white;
+  height: 8svh;
   text-align: center;
 }
 
@@ -82,4 +83,3 @@ form textarea {
   margin: 10px 0;
   box-sizing: border-box;
 }
-

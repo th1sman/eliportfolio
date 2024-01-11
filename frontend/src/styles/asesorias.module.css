@@ -1,0 +1,39 @@
+.consulting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: #9d8156;
+}
+
+.box {
+  position: relative;
+}
+
+.consulting > .box {
+  padding: 10px;
+  margin: 5%;
+  background: white;
+  width: 30%;
+  height: 40svh;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  transition: 0.2s all;
+}
+
+.consulting:hover > .box {
+  filter: blur(2px);
+  opacity: 1;
+  transform: scale(0.98);
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+
+.consulting:hover > .box:hover {
+  transform: scale(1);
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}

@@ -3,6 +3,7 @@
   gap: 10px;
   padding: 20px;
   grid-auto-flow: column;
+  align-items: center;
 }
 
 @media (max-width: 600px) {
