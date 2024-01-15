@@ -1,5 +1,18 @@
 import Layout from "./Layout";
 import Card from "./Card";
+import { styled } from "@mui/system";
+
+const GridContainer = styled("div")(({ theme }) => ({
+  display: "grid",
+  gap: theme.spacing(1), // 10px si el tema por defecto es de 8px
+  padding: theme.spacing(2.5), // 20px si el tema por defecto es de 8px
+  gridAutoFlow: "column",
+  alignItems: "center",
+  [theme.breakpoints.down("sm")]: {
+    // 'sm' generalmente corresponde a 600px
+    gridTemplateColumns: "1fr",
+  },
+}));
 
 interface Image {
   url: string;
@@ -62,7 +75,7 @@ export default function Gallery() {
   ];
 
   return (
-    <Layout>
+    <GridContainer>
       {images.map((img, i) => {
         return (
           <Card
@@ -74,7 +87,6 @@ export default function Gallery() {
           ></Card>
         );
       })}
-    </Layout>
+    </GridContainer>
   );
 }
-

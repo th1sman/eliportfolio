@@ -1,59 +1,102 @@
 import React from "react";
-import styles from "@/styles/dinners.module.css";
-import Navigation from "@/components/Navigation";
-import Image from "next/image";
+import Layout from "@/components/Layout";
+import { Grid, Box } from "@mui/material";
 
 export default function Cenas() {
   return (
-    <div>
-      <Navigation />
-      <div className={styles.container}>
-        <div className={styles.item}>
-          <div className={styles.imageBox}>
-            <Image src="/12.webp" alt="Image1" fill sizes="100vw" />
-          </div>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.imageBox}>
-            <Image src="/12.webp" alt="Image1" fill sizes="100vw" />
-          </div>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.imageBox}>
-            <Image src="/12.webp" alt="Image1" fill sizes="100vw" />
-          </div>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.imageBox}>
-            <Image src="/12.webp" alt="Image1" fill sizes="100vw" />
-          </div>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.imageBox}>
-            <Image src="/12.webp" alt="Image1" fill sizes="100vw" />
-          </div>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.imageBox}>
-            <Image src="/12.webp" alt="Image1" fill sizes="100vw" />
-          </div>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.imageBox}>
-            <Image src="/12.webp" alt="Image1" fill sizes="100vw" />
-          </div>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.imageBox}>
-            <Image src="/12.webp" alt="Image1" fill sizes="100vw" />
-          </div>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.imageBox}>
-            <Image src="/12.webp" alt="Image1" fill sizes="100vw" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <Layout>
+      <Grid container spacing={2}>
+        <Grid item xs={6} md={4}>
+          <Box
+            component="img"
+            src="./9.webp"
+            alt="imagentest"
+            sx={{
+              maxWidth: "100%",
+              height: "100%",
+              transition: "transform .5s ease-in-out",
+              "&:hover": {
+                transform: "scale(1.01)",
+              },
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} md={4}>
+          <Box
+            component="img"
+            src="./549.webp"
+            alt="imagentest"
+            sx={{
+              maxWidth: "100%",
+              height: "100%",
+              transition: "transform .5s ease-in-out",
+              "&:hover": {
+                transform: "scale(1.01)",
+              },
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} md={4}>
+          <Box
+            component="img"
+            src="./10.webp"
+            alt="imagentest"
+            sx={{
+              maxWidth: "100%",
+              height: "100%",
+              transition: "transform .5s ease-in-out",
+              "&:hover": {
+                transform: "scale(1.01)",
+              },
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} md={4}>
+          <Box
+            component="img"
+            src="./45.webp"
+            alt="imagentest"
+            sx={{
+              maxWidth: "100%",
+              height: "100%",
+              transition: "transform .5s ease-in-out",
+              "&:hover": {
+                transform: "scale(1.01)",
+              },
+            }}
+          />
+        </Grid>
+        <Grid xs={6} item md={4}>
+          <Box
+            component="img"
+            src="./37.webp"
+            alt="imagentest"
+            sx={{
+              maxWidth: "100%",
+              maxHeight: "100%",
+              transition: "transform .5s ease-in-out",
+              "&:hover": {
+                transform: "scale(1.01)",
+              },
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} md={4}>
+          <Box
+            component="img"
+            src="./100.webp"
+            alt="imagentest"
+            sx={{
+              maxWidth: "100%",
+              height: "100%",
+              transition: "transform .5s ease-in-out",
+              "&:hover": {
+                transform: "scale(1.01)",
+              },
+            }}
+          />
+        </Grid>
+      </Grid>
+    </Layout>
   );
 }

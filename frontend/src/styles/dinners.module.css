@@ -1,9 +1,9 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  padding: 20px;
-  height: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 200px); /* aumentar el tamaño de las filas */
+  padding: 8%;
+  max-height: 50svh;
 }
 
 .item {
@@ -13,8 +13,4 @@
   justify-content: center;
   font-size: 2em;
   border-radius: 8px;
-  background-color: #cda876;
-  border: 1px solid #d6d6d6;
-  border-radius: 3px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
