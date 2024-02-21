@@ -1,30 +1,60 @@
-import Navigation from "@/components/Navigation";
+import { Box, Grid, Typography } from "@mui/material";
 import Layout from "@/components/Layout";
-import Footer from "@/components/Footer";
-import styles from "@/styles/about.module.css";
-import Image from "next/image";
 
-export default function About() {
+const About = () => {
   return (
     <div>
-      <Navigation />
       <Layout>
-        <div className={styles.quote}>
-          <p>
+        <Box
+          sx={{
+            borderRadius: "15px",
+            padding: { xs: "20px", sm: "40px" },
+            cursor: "pointer",
+            position: "relative",
+            transition: "all 0.3s",
+            backgroundColor: "#110603",
+            color: "#9d8156",
+            height: "auto",
+            "&:hover": {
+              transform: "scale(0.98)",
+            },
+          }}
+        >
+          <Typography
+            variant="body1"
+            color="textPrimary"
+            sx={{ marginBottom: "20px" }}
+          >
             Acompañamos tu proceso de apertura o renovación de negocio
-            gastronomico en todas las areas, para facilitar el exito de la
-            rentabilidad de tu proyecto. El equipo de esta consultora se
-            conforma de profesionales en el area gastronomico, diseño y
-            especialistas en el mundo de finanzas
-          </p>
-          <div className={styles.images}>
-            <Image src="/9.webp" width={500} height={100} alt="fotito1" />
-            <Image src="/12.webp" width={100} height={100} alt="fotito2" />
-            <Image src="/11.webp" width={100} height={100} alt="fotito3" />
-          </div>
-        </div>
+            gastronómico...
+          </Typography>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={4}>
+              <img
+                src="/9.webp"
+                alt="fotito1"
+                style={{ width: "100%", height: "auto" }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <img
+                src="/12.webp"
+                alt="fotito2"
+                style={{ width: "100%", height: "auto" }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <img
+                src="/8.webp"
+                alt="fotito3"
+                style={{ width: "100%", maxHeight: "75svh" }}
+              />
+            </Grid>
+          </Grid>
+        </Box>
       </Layout>
-      <Footer />
     </div>
   );
-}
+};
+
+export default About;

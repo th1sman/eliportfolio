@@ -1,13 +1,11 @@
 import React from "react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import styles from "@/styles/asesorias.module.css";
 import Image from "next/image";
+import Layout from "@/components/Layout";
 
 export default function Asesorias() {
   return (
-    <div>
-      <Navigation />
+    <Layout>
       <section>
         <h2 className={styles.title}>Podemos asesorarte</h2>
         <p className={styles.title}>
@@ -30,7 +28,6 @@ export default function Asesorias() {
           </div>
         </div>
       </section>
-      <Footer />
-    </div>
+    </Layout>
   );
 }
