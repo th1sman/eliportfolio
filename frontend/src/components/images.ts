@@ -9,7 +9,7 @@ export const images: Image[] = [
   {
     url: "/8.webp",
     title: "Piña con frutas",
-    description: "La media vola compañero",
+    description: "Imagen 8",
     sizes:
       "(min-width: 800px) 13.05vw, (min-width: 760px) calc(-1470vw + 11568px), (min-width: 580px) 83.75vw, calc(96.54vw - 22px)",
   },
